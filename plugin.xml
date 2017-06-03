@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-network-manager" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>networkmanager</name>
+  <js-module name="networkmanager" src="www/networkmanager.js">
+    <clobbers target="cordova.plugins.networkmanager" />
+  </js-module><platform name="ios">
+  <config-file parent="/*" target="config.xml">
+    <feature name="networkmanager">
+      <param name="ios-package" value="networkmanager" />
+    </feature>
+  </config-file>
+  <source-file src="src/ios/networkmanager.m" />
+  <framework src="src/ios/IBGxNetworkManager.framework" custom="true"/>
+</platform>
+</plugin>
